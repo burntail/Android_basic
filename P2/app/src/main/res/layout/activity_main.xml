@@ -28,7 +28,7 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:background="@color/material_dynamic_primary95"
-            android:text="2">
+            android:text="made in activity code">
 
         </TextView>
         <TextView
@@ -39,7 +39,7 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:background="@color/material_dynamic_primary95"
-            android:text="3">
+            android:text="Fragment and Addview(?)">
 
         </TextView>
 
@@ -62,7 +62,7 @@
             android:layout_margin="10dp"
             android:gravity="center"
             android:background="@color/material_dynamic_primary95"
-            android:text="4">
+            android:text="Addview test">
 
         </TextView>
         <TextView

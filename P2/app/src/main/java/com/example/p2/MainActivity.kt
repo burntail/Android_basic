@@ -79,6 +79,23 @@ class MainActivity : AppCompatActivity() {
             startActivity(go_intent)
         }
 
+        text_2.setOnClickListener{
+
+            val go2_intent =Intent(this@MainActivity,made_in_activity_code::class.java)
+            startActivity(go2_intent)
+
+        }
+
+        text_3.setOnClickListener {
+            val go3_intent=Intent(this@MainActivity,FragmentAndAddviewActivity::class.java)
+            startActivity(go3_intent)
+        }
+
+        text_4.setOnClickListener {
+            val go4_intent=Intent(this@MainActivity,PhoneBookActivity::class.java)
+            startActivity(go4_intent)
+        }
+
     }
 
     override fun onPause() {
