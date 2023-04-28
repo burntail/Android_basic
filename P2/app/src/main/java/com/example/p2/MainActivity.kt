@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         text_4.setOnClickListener {
-            val go4_intent=Intent(this@MainActivity,PhoneBookActivity::class.java)
+            val go4_intent=Intent(this@MainActivity,PhoneBook2::class.java)
             startActivity(go4_intent)
         }
 
