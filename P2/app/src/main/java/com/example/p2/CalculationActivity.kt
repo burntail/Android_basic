@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.TextView
-import com.example.p2.databinding.ActivityCalculationBinding
+//import com.example.p2.databinding.ActivityCalculationBinding
 import kotlin.properties.Delegates
 
 class CalculationActivity : AppCompatActivity() {
@@ -41,7 +41,7 @@ class CalculationActivity : AppCompatActivity() {
         calculation_findViews() // view binding 으로도 충분히 가능
         //  binding example
 
-        val binding = ActivityCalculationBinding.inflate(layoutInflater)
+//        val binding = ActivityCalculationBinding.inflate(layoutInflater)
 //        binding.calculation0=???
 
     }

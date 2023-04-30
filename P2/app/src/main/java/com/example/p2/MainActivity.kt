@@ -96,6 +96,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(go4_intent)
         }
 
+        text_5.setOnClickListener {
+            val go5_intent=Intent(this@MainActivity,CalculationActivity::class.java)
+            startActivity(go5_intent)
+        }
+
     }
 
     override fun onPause() {

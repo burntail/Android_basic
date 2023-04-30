@@ -11,7 +11,7 @@ class PhoneBook2 : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_phone_book2)
-
+2
         val container_2=findViewById<LinearLayout>(R.id.container_2)
         val inflater = LayoutInflater.from(this@PhoneBook2)
 
