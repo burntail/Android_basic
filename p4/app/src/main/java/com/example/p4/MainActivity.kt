@@ -9,6 +9,7 @@ import android.widget.BaseAdapter
 import android.widget.LinearLayout
 import android.widget.ListView
 import android.widget.TextView
+import android.widget.Toast
 //import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import java.util.zip.Inflater
 import com.example.p4.ViewHolder
@@ -31,6 +32,14 @@ class MainActivity : AppCompatActivity() {
         var car_list_=findViewById<ListView>(R.id.car_list)
 
         car_list_.adapter=adapter
+
+        car_list_.setOnItemClickListener { parent, view, position, id ->
+            var car:Car = adapter.car_list.get(position)
+            var carname= car.name
+            var carengine=car.engine
+
+            Toast.makeText(this,carname+" "+carengine,Toast.LENGTH_SHORT).show()
+        }
 
         var button_of_add_car=findViewById<TextView>(R.id.add_car_tab)
 
@@ -82,7 +91,7 @@ class CarBaseAdapter(var car_list:MutableList<Car>,var layoutinflater:LayoutInfl
 
         }
         else { // 재활용 가능
-            holder=convertView.tag as ViewHolder
+            holder=convertView.tag as ViewHolder // animal as Dog
             new_view=convertView
 
 
