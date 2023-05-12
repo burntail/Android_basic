@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
 
         findViewById<RecyclerView>(R.id.car_recycler_view).adapter= RecyclerViewAdapter(car_list, LayoutInflater.from(this@MainActivity))
 
-        //내려 받은 뷰를 어떻게 배치를 할 건지 결정하는 매니저
+        //내려 받은 뷰를 어떻게 배치를 할 건지 결정하는 매니저 -> 어떤 매니
         findViewById<RecyclerView>(R.id.car_recycler_view).layoutManager= LinearLayoutManager(this@MainActivity)
 
 
@@ -64,9 +64,9 @@ class MainActivity : AppCompatActivity() {
 //    }
 //}
 
-class RecyclerViewAdapter(var Car_list:MutableList<Car>, var inflater:LayoutInflater):RecyclerView.Adapter<RecyclerViewAdapter.ViewHolder>(){
+class RecyclerViewAdapter(var Car_list:MutableList<Car>, var inflater:LayoutInflater):RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder>(){
 
-    class ViewHolder(itemview:View):RecyclerView.ViewHolder(itemview){ // 무조건 대소문자 고려해서 "ViewHolder"로 입력 해야 onBindViewHolder에 제대로 파싱됨 -> holder:ViewHolder
+    class MyViewHolder(itemview:View):RecyclerView.ViewHolder(itemview){ // 무조건 대소문자 고려해서 "ViewHolder"로 입력 해야 onBindViewHolder에 제대로 파싱됨 -> holder:ViewHolder
         var carname_textview:TextView
         var carengine_textview:TextView
         init {
@@ -76,16 +76,16 @@ class RecyclerViewAdapter(var Car_list:MutableList<Car>, var inflater:LayoutInfl
         }
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         var view=inflater.inflate(R.layout.car_item,parent,false)
-        return RecyclerViewAdapter.ViewHolder(view)
+        return RecyclerViewAdapter.MyViewHolder(view)
     }
 
     override fun getItemCount(): Int {
         return Car_list.size
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.carname_textview.text=Car_list.get(position).car_name
         holder.carengine_textview.text=Car_list.get(position).car_engine
     }

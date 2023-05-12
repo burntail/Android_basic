@@ -13,6 +13,8 @@ class FragmentAndAddviewActivity : AppCompatActivity() {
 
         val fragmentmanager =supportFragmentManager
         val fragmentfirst=FragmentFirst()
+
+        
         //Transaction
         // - 작업의 단위 -
 

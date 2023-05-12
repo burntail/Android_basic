@@ -45,6 +45,8 @@ class MainActivity : AppCompatActivity() {
     }
 }
 
+
+
 class FragmentPagerAdapter(var fragmentmanager:FragmentManager,var tabCount:Int): FragmentStatePagerAdapter(fragmentmanager){
 
 

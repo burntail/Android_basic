@@ -19,6 +19,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        R.id.add_car_tab
+
         var car_list= mutableListOf<Car>()
 
 //        for (i in 1..50){
@@ -107,7 +109,7 @@ class CarBaseAdapter(var car_list:MutableList<Car>,var layoutinflater:LayoutInfl
 
 
 
-        // 아래 코드는 데이터 개수 만큼 inflate를 해주어야 해서 리소스를 많이 잡아 먹음
+//         아래 코드는 데이터 개수 만큼 inflate를 해주어야 해서 리소스를 많이 잡아 먹음
 //        var new_view=layoutinflater.inflate(R.layout.car_item,null)
 //        var car_name_textview=new_view.findViewById<TextView>(R.id.car_name)
 //        var car_engine_textview=new_view.findViewById<TextView>(R.id.car_engine_number)
