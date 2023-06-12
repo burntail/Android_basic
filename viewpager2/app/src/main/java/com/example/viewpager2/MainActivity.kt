@@ -32,11 +32,12 @@ class MainActivity : AppCompatActivity() {
 
         pager_1.adapter=viewPager2Adatper_1
 
-        //registerOnPageChangeCallback은 ViewPager2.OnPageChangeCallback() 이라는 객체를 등록하는데 이 객체에 대한 동작을 처리 => onPageScrollStateChanged 라는 동작으로 구현
+       //registerOnPageChangeCallback은 ViewPager2.OnPageChangeCallback() 이라는 객체를 등록하는데 이 객체에 대한 동작을 처리 => onPageScrollStateChanged 라는 동작으로 구현
         //onPageScrollStateChanged(state: Int): 페이지 전환 상태가 변경되었을 때 호출되는 메서드 입니다 -> 전환 상태
         pager_1.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback(){
             override fun onPageScrollStateChanged(state: Int) {
                 super.onPageScrollStateChanged(state)
+
             }
         })
         // TabLayoutMediator는 TabLayout과 ViewPager2를 연결하여 탭과 페이지 사이의 상호작용을 관리하는 유틸리티 클래스입니다. 이 클래스를 사용하면 간단하게 탭과 페이지 간의 동기화를 설정
